@@ -293,3 +293,20 @@ display: none;
 .reveal:hover .hide{
 display : block;
 }
+.PleaseWait
+{
+    position:relative;
+    top:-150px;
+    margin:auto;
+display:block;
+z-index:99;
+height: 300px;
+width: 300px;
+background: url(../Images/PleaseWait.gif);
+background-image: url(../Images/PleaseWait.gif);
+background-repeat: no-repeat;
+/*min-height:100%;*/
+/*padding-left: 40px;*/
+/*line-height: 200px;*/
+background-position-x:center;
+}

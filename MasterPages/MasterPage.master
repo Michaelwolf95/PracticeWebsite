@@ -14,7 +14,7 @@
     <%--<link id="ThemeStyleSheet" rel="stylesheet" type="text/css" runat="server"/>--%>
     <link rel="stylesheet" href="../Content/w3.css" type="text/css"/>
 
-    <%--<link rel="stylesheet" href="../Content/Test.css" type="text/css"/>--%>
+    <link rel="stylesheet" href="../Content/Test.css" type="text/css"/>
     <%-- <link rel="stylesheet" href="../Content/animate.css" type="text/css"/>--%>
     <%--<script type="text/javascript" src="Scripts/jquery-1.10.2.js"></script>--%>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -24,10 +24,10 @@
     <%--style='<%= GetBackgroundImageURL() %>'>--%><%--'"background-image: url('<%= GetBackgroundImageURL()%>')">--%> <%--style="background-image:url(../App_Themes/Muted_Gradient/Images/Lenny.jpg)">--%>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server">
-        <Scripts>
-            <asp:ScriptReference Path="~/Scripts/jQuery_3_1_1.js" />
-        </Scripts>
-    </asp:ScriptManager>
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/jQuery_3_1_1.js" />
+            </Scripts>
+        </asp:ScriptManager>
     <%--<asp:Image SkinID="BackgroundImage" ID="BackgroundImage" runat="server" CssClass="background_image_full"/>--%>
     <%--<img src="../App_Themes/Muted_Gradient/Images/Lenny.jpg" class="background_image_full"/>--%>
     <div id="MainDiv" class="mainBody">
@@ -46,20 +46,20 @@
         --%>
     
        
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
+    <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>--%>
             <asp:ContentPlaceHolder id="Main" runat="server">
         
             </asp:ContentPlaceHolder>
-        </ContentTemplate>
-    </asp:UpdatePanel>
-    <asp:UpdateProgress ID="UpdateProgress1" AssociatedUpdatePanelID="UpdatePanel1" runat="server">
+   <%--     </ContentTemplate>
+    </asp:UpdatePanel>--%>
+    <%--<asp:UpdateProgress ID="UpdateProgress1" AssociatedUpdatePanelID="UpdatePanel1" runat="server">
         <ProgressTemplate>
             <div>
                 Please Wait...
             </div>
         </ProgressTemplate>
-    </asp:UpdateProgress>
+    </asp:UpdateProgress>--%>
 
     </div>
         <footer class="bottom">

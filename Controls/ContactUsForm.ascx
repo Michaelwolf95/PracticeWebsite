@@ -1,6 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ContactUsForm.ascx.cs" Inherits="Controls_ContactUsForm" %>
-
-<asp:Wizard style="text-align:center" ID="Wizard1" runat="server" ActiveStepIndex="0" Height="400px" Width="75%">
+<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+<ContentTemplate>
+<asp:Wizard style="text-align:center" ID="Wizard1" runat="server" ActiveStepIndex="0" Height="400px" Width="75%" OnFinishButtonClick="Wizard1_FinishButtonClick">
     <WizardSteps>
         <asp:WizardStep runat="server" title="Contact Info">
             <div style="text-align:center">
@@ -82,7 +83,15 @@
         </asp:WizardStep>
     </WizardSteps>
 </asp:Wizard>
-
+</ContentTemplate>
+</asp:UpdatePanel>
+<asp:UpdateProgress ID="UpdateProgress1" AssociatedUpdatePanelID="UpdatePanel1" runat="server">
+        <ProgressTemplate>
+            <div class ="PleaseWait" style="text-align:center">
+                <%--Please Wait...--%>
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
 <script>
     $(function()
     {
@@ -100,6 +109,26 @@
         {
             textBoxType = "input[type=" + textBoxType + "]";
             $(textBoxType).each(function () {
+                if ($.trim($(this).val()) == "") {
+                    $(this).css({
+                        "border": "1px solid red",
+                        "background": "#FFCECE"
+                    }).animate({ opacity: 0.5, speed: 0.6 });
+                }
+                else
+                {
+                    $(this).css({
+                        "border": "",
+                        "background": "#b1ffad",
+                        "opacity" : 1
+                    });
+                }
+            });
+        }
+        function HighlightTextBoxBYID(ID)
+        {
+            textBoxType = ID;
+            $(textBoxType).each(function () {
                 if ($.trim($(this).val()) == '') {
                     $(this).css({
                         "border": "1px solid red",
@@ -110,15 +139,14 @@
                     $(this).css({
                         "border": "",
                         "background": "#b1ffad",
-                        "opacity" : 1
+                        "opacity": 1
                     });
                 }
             });
         }
     });
-    function pageLoad() {
-        $('.Attention').animate({ width: '600px' }, 3000).
-        animate({ width: '100px' }, 3000).fadeOut('slow');
-    }
-    // Code from step 5 goes here
+    //function pageLoad() {
+    //    $('.Attention').animate({ width: '600px' }, 3000).
+    //    animate({ width: '100px' }, 3000).fadeOut('slow');
+    //}
 </script>

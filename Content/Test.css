@@ -273,3 +273,12 @@ display: none;
 .reveal:hover .hide{
 display : block;
 }
+.PleaseWait
+{
+height: 32px;
+width: 500px;
+background-image: url(../App_Themes/Muted_Gradient/Images/PleaseWait.gif);
+background-repeat: no-repeat;
+padding-left: 40px;
+line-height: 32px;
+}
