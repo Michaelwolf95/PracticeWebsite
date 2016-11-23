@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode>
+    <siteMapNode url="Default.aspx" title="Home"  description="Home Page" />
+      <siteMapNode url="SubPages_ASPX/Projects.aspx" title="Projects"  description="Projects Page">
+        <siteMapNode url="ProjectsPages/CloudBound.aspx" title="CloudBound"  description="CloudBound Page"/>
+        <siteMapNode url="ProjectsPages/SweetEscape.aspx" title="SweetEscape"  description="SweetEscape Page"/>
+      </siteMapNode>
+      <siteMapNode url="SubPages_ASPX/About.aspx" title="About" description="About Page" />
+      <siteMapNode url="SubPages_ASPX/Contact.aspx" title="Contact"  description="Contact Page" />
+      <siteMapNode url="SubPages_ASPX/Donate.aspx" title="Donate"  description="Donate Page" />
+      <siteMapNode url="SubPages_ASPX/Products.aspx" title="Products"  description="Products Page" />
+   
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" ClassName="MyMasterPage" 
+    CodeFile="MasterPage.master.cs" Inherits="MasterPages_MasterPage" EnableTheming="false" %>
+
+<%--<%@ MasterType virtualpath="~/MasterPages/MasterPage.master" %>--%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%--<title>Master Page</title>--%>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <%--<link id="ThemeStyleSheet" rel="stylesheet" type="text/css" runat="server"/>--%>
+    <link rel="stylesheet" href="../Content/w3.css" type="text/css"/>
+
+    <%--<link rel="stylesheet" href="../Content/Test.css" type="text/css"/>--%>
+    <%-- <link rel="stylesheet" href="../Content/animate.css" type="text/css"/>--%>
+    <%--<script type="text/javascript" src="Scripts/jquery-1.10.2.js"></script>--%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../Scripts/Test.js"></script>
+</head>
+<body id="Body" runat="server" class="background_image_full">
+    <%--style='<%= GetBackgroundImageURL() %>'>--%><%--'"background-image: url('<%= GetBackgroundImageURL()%>')">--%> <%--style="background-image:url(../App_Themes/Muted_Gradient/Images/Lenny.jpg)">--%>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="~/Scripts/jQuery_3_1_1.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <%--<asp:Image SkinID="BackgroundImage" ID="BackgroundImage" runat="server" CssClass="background_image_full"/>--%>
+    <%--<img src="../App_Themes/Muted_Gradient/Images/Lenny.jpg" class="background_image_full"/>--%>
+    <div id="MainDiv" class="mainBody">
+        <%--
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server" ></asp:SiteMapPath>
+        <asp:TreeView ID="Tree" runat="server" DataSourceID="SiteMapDataSource1" ImageSet="Arrows">
+            <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+            <Nodes>
+                <asp:TreeNode Text="New Node" Value="New Node"></asp:TreeNode>
+            </Nodes>
+            <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+            <ParentNodeStyle Font-Bold="False" />
+            <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+        </asp:TreeView>
+        --%>
+    
+       
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <asp:ContentPlaceHolder id="Main" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    <asp:UpdateProgress ID="UpdateProgress1" AssociatedUpdatePanelID="UpdatePanel1" runat="server">
+        <ProgressTemplate>
+            <div>
+                Please Wait...
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+
+    </div>
+        <footer class="bottom">
+           <%-- <div class="fadeInUp">--%>
+            <div class="gradient-gray">
+                <hr class="thin-linear-gradient"/>
+                <p style="text-align:center">
+                    <a class="button" href="../Default.aspx">Home</a>
+                    <a class="button" href="../SubPages_ASPX/Projects.aspx">Projects</a>
+                    <a class="button" href="../SubPages_ASPX/About.aspx">About Me</a>
+                    <a class="button" href="../SubPages_ASPX/Contact.aspx">Contact Me</a>
+                    <a class="button" href="../SubPages_ASPX/Donate.aspx">Donate</a>
+                    <a class="button" href="../SubPages_ASPX/Products.aspx">Products</a>
+                    <asp:Button ID="ThemeSwap" runat="server" OnClick="ThemeSwap_Click" />
+                </p>
+                <div style="text-align:center" >
+                    <a class="button" href="javascript:history.back()">Go Back</a>
+                    <div class="timerText" style="display:inline"><div style="text-align:right"><asp:Label ID="TimeLabel" runat="server" Text="Label"></asp:Label></div></div>
+                </div>
+            </div>
+           <%-- </div>--%>
+            <asp:ContentPlaceHolder ID="jQueryPlaceHolder" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </footer>
+    </form>
+</body>
+</html>

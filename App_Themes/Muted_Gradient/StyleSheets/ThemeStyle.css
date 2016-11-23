@@ -1,0 +1,295 @@
+﻿div.mainBody
+{
+
+}
+
+body.image-UnityLogo
+{
+    background-image:url("../Resources/BackgroundImages/UnityLogo.png");
+}
+
+.background_image_full
+{
+    /*background: url('../App_Themes/Muted_Gradient/Images/Lenny.jpg'); /*no-repeat center center fixed;*/
+    position: absolute; /*fixed;*/ 
+    top: 0; 
+    left: 0; 
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+    /*background-size: cover;
+    background-repeat: no-repeat;*/
+
+    /*-webkit-transform-origin: 100% 100%;
+    transform-style:flat;
+    transform-origin: bottom left;*/
+    /*background-origin: content-box;*/
+    /*background-size:     cover;                     
+    background-repeat:   no-repeat;*/
+    /*background-position: center center;*/
+}
+
+div.gradient-gray
+{
+    background:
+        linear-gradient(to right, 
+        rgba(0, 0, 0, 0), 
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0));
+    padding-bottom: 7px;
+}
+.button
+{
+    font-family: Arial;
+    color: black;
+
+    border-style: solid;
+    border-width: medium;
+    border-spacing: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: lightgray;
+    border-color: darkgray;
+    text-decoration: none;
+    border-radius: 7px;
+
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+
+    margin: 5px;
+}
+.button:hover
+{
+    font-family: Arial;
+    /*font-weight: bold;*/
+    color: black;
+    border-style: solid;
+    border-width: medium;
+    border-spacing: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    
+    border-color: gray;
+    background-color: #e8e8e8;
+    /*border-top-width:medium;*/
+    text-decoration: none;
+    border-radius: 7px;
+    margin: 5px;
+}
+.button:active
+{
+    font-family: Arial;
+    font-weight: bold;
+    color: #e8e8e8;
+    border-style: solid;
+    border-width: medium;
+    border-spacing: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    
+    border-color: gray;
+    background-color: #e8e8e8;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+a.divider
+{
+    width: 10px;
+    height: inherit;
+    display: inline-block;
+}
+footer.bottom
+{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+hr.thin-linear-gradient
+{
+    border: 0;
+    
+    height: 2px;
+    background-image: 
+        linear-gradient(to right, 
+        rgba(0, 0, 0, 0), 
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0));
+    transition-duration: 0.2s;
+}
+.jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #eeeeee;
+}
+
+.timerText{
+    color: black;
+    font-size:smaller;
+}
+
+.thumbnail > img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+a.thumbnail:hover
+{
+    border:1px solid double;
+    /*border-style: solid;
+    border-width: medium;
+    border-spacing: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: lightgray;*/
+    /*border-color: darkgray;
+    text-decoration: none;
+    border-radius: 7px;*/
+}
+a.thumbnail:hover,
+a.thumbnail:focus {
+  border-color: #428bca;
+}
+
+.thumbnail > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #333333;
+}
+
+.picture-border
+{
+    border:1px solid double;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0; 
+    overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 75%;
+}
+
+div.three-collumn
+{
+    column-count: 3;
+}
+div.two-collumn
+{
+    column-count: 2;
+}
+/*.container {
+    position: relative;
+    width: 500px;
+}
+.container div {
+    height: 300px;
+    top: -15px;
+    left: 344px;
+}
+
+.column-left {
+    width: 33%;
+    left: 0;
+    background: #00F;
+    position: absolute;
+}
+.column-center {
+    width: 34%;
+    background: #933;
+    margin-left: 33%;
+    position: absolute;
+}
+.column-right {
+    width: 33%;
+    right: 0;
+    position: absolute;
+    background: #999;
+}*/
+
+
+
+.containter {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    
+    /*for demo purposes only 
+    background: #f2f2f2;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;*/
+}
+.column-one {
+    order: 3;
+}
+.column-two {
+    order: 1;
+}
+.column-three {
+    order: 4;
+}
+.column-four {
+    order: 2;
+}
+.column-five {
+    order: 5;
+}
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+
+/*a.hide
+{
+
+}
+div.hide {
+    display: none;
+}
+ 
+/*a:hover + div.hide {
+    display: block;
+}
+a.hide + div
+{
+    display:none;
+}
+a.hide:hover + div 
+{
+    display:block;
+}*/
+
+.hide{ 
+display: none;
+}
+.reveal:hover .hide{
+display : block;
+}
